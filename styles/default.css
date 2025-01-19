@@ -1,8 +1,8 @@
 body {
 	/* you better change this stuff */
-	margin: 300px;
-	font-family: papyrus;
-	color: red;
-	background-color: green;
-	font-size: 300%;
+	margin: 150px;
+	font-family: Garamond (serif);
+	color: rgb(13, 4, 64);
+	background-color: rgb(247, 233, 160);
+	font-size: 250%;
 }
