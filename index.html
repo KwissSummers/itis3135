@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta info and style sheet-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/default.css" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Chris Li's course webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <!--
-        Structure of HTML5 semantic layout swiped from PHP Fiddle and modified
-        to include validing code and validation buttons and some other tweaks
-
-        +===================================+
-        |               header              |
-        +===================================+
-        |                 nav               |
-        +=====================+=============+
-        |                     |             |
-        |       section       |    aside    |
-        |
-        +=====================+=============+
-        |          footer/tagline           |
-        |         validation buttons        |
-        +===================================+
-
-        The code from Internet
-
-        http://phpfiddle.org
-    -->
+    <!--Title, name, mascot, course id, page name-->
+    <title>Chris Li's Cozy labrador | ITCS3135 | Home</title>
 </head>
 
 <body>
     <header>
-        <h1>Header</h1>
-        <h2>Subheader</h2>
+        <h1>Chris Li's Cozy Labrador | ITCS3135</h1>
+        <!--Nav Bar-->
+        <nav>
+            <ul> <!-- Changed from <u1> to <ul> -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introductions.html">Introductions</a></li>
+                <li><a href="contract.html">Contract</a></li>
+                <li><a href="https://uncc.edu">UNCC Home</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Menu Option 1</a></li>
-            <li><a href="#">Menu Option 2</a></li>
-        </ul>
-    </nav>
+
+    <!--Main Content-->
+    <main>
+        <h2>Welcome to Chris Li's ITCS3135 Webpage!</h2>
+        <p>This is the homepage of my course webpage. Navigate using the menu!</p>
+        <figure>
+            <img src="images/cozylabrador.png" alt="Chris Li's Cozy Labrador Mascot" />
+            <figcaption>A Cozy Labrador is the mascot of my page</figcaption>
+        </figure>
+    </main>
+
+    <!--Footer Section-->
     <footer>
-        Bazzom bazang... we do the bestest!
-        <br />Designed by &copy;Icabad Enterprises
-        <br />
-        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fkwisssummers.github.io%2FITCS3135" style="text-decoration: none">
-            <img src="images/validation_button_html-blue.png" alt="Validate HTML" />
-        </a>
-        <!-- you may need to change the name of your image link to match the one you
-        uploaded -->
-        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fkwisssummers.github.io%2FITCS3135%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" style="text-decoration: none">
-            <img src="images/validation_button_css-blue.png" alt="Validate CSS" />
-        </a>
+        <ul> <!-- Changed from <u1> to <ul> -->
+            <li><a href="https://webpages.charlotte.edu/cli36/">CLT WEB</a></li>
+            <li><a href="https://kwisssummers.github.io/">GitHub</a></li>
+            <li><a href="https://kwisssummers.github.io/itcs3135/">Course Github.io</a></li>
+            <li><a href="https://www.freecodecamp.org/ChrisLi">FreeCodeCamp Profile</a></li>
+            <li><a href="https://www.codecademy.com/profiles/Cli36">Codecademy Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/chris4li/">LinkedIn Profile</a></li>
+        </ul>
+        <p>Designed by Chris Li Enterprises &copy; 2025</p>
     </footer>
 </body>
+
 </html>

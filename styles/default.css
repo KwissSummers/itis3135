@@ -1,8 +1,183 @@
 body {
-	/* you better change this stuff */
-	margin: 150px;
-	font-family: Garamond, serif;
-	color: rgb(13, 4, 64);
-	background-color: rgb(255, 217, 91);
-	font-size: 250%;
+    background: linear-gradient(to bottom, 
+        #FFEB99,  /* Soft yellow */
+        #FFD5A3,  /* Peachy orange */
+        #FFB6A0,  /* Light pink */
+        #B6E0A0,  /* Minty green */
+        #A2DFF7   /* Soft sky blue */
+    );
+    background-size: 100% 250%; /* Ensures the background covers more vertical space */
+    background-position: top center; /* Starts the gradient from the top center */
+    min-height: 100vh; /* Ensure the body takes up full height */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Bubbly sans-serif font */
+    color: #2C6B2F; /* Dark leafy green text */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+/* Header Styling */
+header {
+    background-color: #6B4F31; /* Coffee brown header */
+    color: white; /* White text for contrast */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Caveat', cursive; /* Fun handwriting font */
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Navigation Bar Styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px; /* Adds equal space on both sides of each link */
+}
+
+nav ul li a {
+    color: #D9A95A; /* Warm yellow for text */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Add '|' separator between items except the last one */
+nav ul li:not(:last-child) {
+    margin-right: 15px; /* Extra space to accommodate the separator */
+}
+
+nav ul li:not(:last-child)::after {
+    content: " |";
+    color: #D9A95A;
+    margin-left: 10px; /* Space after the '|' */
+}
+
+/* Hover effect for the links */
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #F7E9A0; /* Lighter yellow on hover */
+}
+
+/* Main Content Styling */
+main {
+    text-align: center;
+    padding: 50px;
+}
+
+main h2 {
+    font-family: 'Caveat', cursive; /* Handwriting font for headings */
+    font-size: 2em;
+    color: #6B4F31; /* Coffee brown for headings */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #6B4F31; /* Coffee brown footer */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: #D9A95A; /* Warm yellow for text */
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+    color: #F7E9A0; /* Lighter yellow on hover */
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+/* Link Styling */
+a {
+    color: #2C6B2F; /* Dark leafy green */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: #3E8A45; /* Slightly darker green for visited links */
+}
+
+a:hover {
+    color: #F7E9A0; /* Lighter yellow for hover */
+    text-decoration: underline;
+}
+
+a:active {
+    color: #FF4500; /* Orange-red for active links */
+    text-decoration: none;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+figure {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    color: rgb(13, 4, 64);
+    margin-top: 10px;
+}
+
+/* Ensure the unordered list aligns to the left */
+ul {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 20px;
+    list-style-position: inside;
+}
+
+ul ul {
+    padding-left: 40px;
+}
+
+/* Ensure all elements within the page are properly contained */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width */
+}
+
+/* Prevent any specific element from going beyond the viewport width */
+html, body {
+    width: 100%; /* Ensures full width usage without overflow */
+    height: 100%; /* Ensures the full height is used */
+    margin: 0; /* Removes default margin that might cause overflow */
+    padding: 0; /* Removes default padding */
 }
