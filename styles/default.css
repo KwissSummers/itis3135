@@ -1,7 +1,7 @@
 body {
 	/* you better change this stuff */
 	margin: 150px;
-	font-family: Garamond (serif);
+	font-family: Garamond, serif;
 	color: rgb(13, 4, 64);
 	background-color: rgb(247, 233, 160);
 	font-size: 250%;
