@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\styles"
   ],
-  "SelectedNode": "\\template.html",
+  "SelectedNode": "\\styles\\default.css",
   "PreviewInSolutionExplorer": false
 }
