@@ -7,21 +7,12 @@
     <link rel="stylesheet" type="text/css" href="styles/default.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/HTMLInclude.js"></script>
 </head>
-<body>
-    <!--Header-->
-    <header>
-        <h1>Chris Li’s Cozy Labrador | ITIS3135</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="https://webpages.charlotte.edu/cli36/itis3135/about.html">About</a></li>
-                <li><a href="introductions.html">Introduction</a></li>
-                <li><a href="contract.html">Contract</a></li>
-                <li><a href="https://uncc.edu/">UNCC Home</a></li>
-            </ul>
-        </nav>
-    </header>
+
+<body onload="includeHTML();">
+    <!-- Dynamically load header -->
+    <div w3-include-html="components/header.html"></div>
 
     <!--Main Content-->
     <main>
@@ -54,16 +45,16 @@
         </ul>
 
     </main>
-    <footer>
-        <ul>
-            <li><a href="https://webpages.charlotte.edu/cli36/">CLT WEB</a></li>
-            <li><a href="https://kwisssummers.github.io/">GitHub</a></li>
-            <li><a href="https://kwisssummers.github.io/itis3135/">Course Github.io</a></li>
-            <li><a href="https://www.freecodecamp.org/ChrisLi">FreeCodeCamp Profile</a></li>
-            <li><a href="https://www.codecademy.com/profiles/Cli36">Codecademy Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/chris4li/">LinkedIn Profile</a></li>
-        </ul>
-        <p>Designed by Chris Li Enterprises &copy; 2025</p>
-    </footer>
+     <!-- Dynamically load footer -->
+     <div w3-include-html="components/footer.html"></div>
+
+     <!-- JavaScript to dynamically update validation links -->
+     <script>
+         document.getElementById("validation_link_html").setAttribute("href", 
+         "https://validator.w3.org/check?uri=" + location.href);
+ 
+         document.getElementById("validation_link_css").setAttribute("href", 
+         "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+     </script>
 </body>
 </html>
