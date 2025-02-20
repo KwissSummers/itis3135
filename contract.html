@@ -6,11 +6,11 @@
     <title>Chris Li’s Cozy Labrador | ITIS3135 | Contract</title>
     <link rel="stylesheet" type="text/css" href="styles/default.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/HTMLInclude.js"></script> <!-- Ensure this is loaded first -->
+    <script src="scripts/HTMLInclude.min.js"></script> <!-- Include HTMLInclude.js -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
-<body onload="includeHTML();"> <!-- Call includeHTML directly on onload -->
+<body>
     <!-- Dynamically load header -->
     <div data-include="components/header.html"></div>
 
@@ -35,6 +35,11 @@
 
     <!-- Dynamically load footer -->
     <div data-include="components/footer.html"></div>
+
+    <!-- Run HTMLInclude to load header/footer dynamically -->
+    <script>
+        HTMLInclude();  // Dynamically load the header and footer content
+    </script>
 
     <!-- JavaScript to dynamically update validation links -->
     <script>
