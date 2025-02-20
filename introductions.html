@@ -10,11 +10,11 @@
     <script src="scripts/HTMLInclude.js"></script>
 </head>
 
-<body onload="includeHTML();">
+<body>
     <!-- Dynamically load header -->
     <div data-include="components/header.html"></div>
 
-    <!--Main Content-->
+    <!-- Main Content -->
     <main>
         <h2>Introduction</h2>
 
@@ -45,16 +45,24 @@
         </ul>
 
     </main>
-     <!-- Dynamically load footer -->
-     <div data-include="components/footer.html"></div>
 
-     <!-- JavaScript to dynamically update validation links -->
-     <script>
-         document.getElementById("validation_link_html").setAttribute("href", 
-         "https://validator.w3.org/check?uri=" + location.href);
- 
-         document.getElementById("validation_link_css").setAttribute("href", 
-         "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-     </script>
+    <!-- Dynamically load footer -->
+    <div data-include="components/footer.html"></div>
+
+    <!-- JavaScript to dynamically update validation links -->
+    <script>
+        // Ensure the page content is fully loaded before executing the script
+        window.addEventListener('load', function () {
+            // Wait for HTMLInclude to load content
+            includeHTML();
+
+            // Update validation links after the page has loaded
+            document.getElementById("validation_link_html").setAttribute("href", 
+                "https://validator.w3.org/check?uri=" + location.href);
+
+            document.getElementById("validation_link_css").setAttribute("href", 
+                "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        });
+    </script>
 </body>
 </html>
