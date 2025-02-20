@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="styles/default.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <script src="scripts/HTMLInclude.js"></script>
+    <script src="scripts/HTMLInclude.js"></script> <!-- Ensure the script is loaded -->
 </head>
 
 <body>
@@ -41,7 +41,7 @@
         // Ensure the page content is fully loaded before executing the script
         window.addEventListener('load', function () {
             // Wait for HTMLInclude to load content
-            includeHTML();
+            includeHTML();  // Load the header and footer dynamically
 
             // Update validation links after the page has loaded
             document.getElementById("validation_link_html").setAttribute("href", 
