@@ -16,6 +16,19 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Styling for the new nav bar */
+#crappy-nav {
+    background-color: lightgray;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#crappy-nav a {
+    color: red; /* Color for the "crappy" link */
+    text-decoration: underline;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
 
 /* Header Styling */
 header {
