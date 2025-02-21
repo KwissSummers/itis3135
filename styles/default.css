@@ -16,19 +16,30 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Styling for the new nav bar */
-#crappy-nav {
-    background-color: lightgray;
-    padding: 10px;
-    margin-bottom: 20px;
+/* Styling for the new nav bar with Light Tan and smaller text */
+#other-nav {
+    background-color: #F1E6D9; /* Light tan */
+    padding: 5px 10px; /* Reduced padding for a smaller navbar */
+    margin-bottom: 15px;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3f6b3f;
+    height: 40px; /* Reduced height */
 }
 
-#crappy-nav a {
-    color: red; /* Color for the "crappy" link */
+#other-nav a {
+    color: #2C6B2F; /* Dark leafy green for the link text */
     text-decoration: underline;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Consistent font family */
+    font-size: 0.8em; /* Smaller font size for the links */
 }
 
+#other-nav a:hover {
+    color: #F7E9A0; /* Lighter yellow on hover for consistency */
+}
 
 /* Header Styling */
 header {
