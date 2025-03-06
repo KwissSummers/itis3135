@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta info and style sheet-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Li’s Cozy Labrador | ITIS3135 | Home</title>
     <link rel="stylesheet" type="text/css" href="styles/default.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
-    <!--Title, name, mascot, course id, page name-->
-    <title>Chris Li's Cozy labrador | ITCS3135 | Home</title>
+    <script src="scripts/HTMLInclude.min.js"></script> <!-- Include HTMLInclude.js -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Chris Li's Cozy Labrador | ITCS3135</h1>
-        <!--Nav Bar-->
-        <nav>
-            <ul> <!-- Changed from <u1> to <ul> -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="introductions.html">Introductions</a></li>
-                <li><a href="contract.html">Contract</a></li>
-                <li><a href="https://uncc.edu">UNCC Home</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Dynamically load header -->
+    <div data-include="components/header.html"></div>
 
-    <!--Main Content-->
+    <!-- Separate Nav for "other" Webpages -->
+    <nav id="other-nav">
+        <ul>
+            <li><a href="stuff/CRAPPY%20webpage-lmao!.html">CRAPPY Webpage</a></li>
+            <li><a href="website_evaluations.html">Website Evaluations</a></li>
+            <li><a href="tables.html">HTML Tables</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-        <h2>Welcome to Chris Li's ITCS3135 Webpage!</h2>
+        <h2>Welcome to Chris Li's ITIS3135 Webpage!</h2>
         <p>This is the homepage of my course webpage. Navigate using the menu!</p>
         <figure>
             <img src="images/cozylabrador.png" alt="Chris Li's Cozy Labrador Mascot">
@@ -36,18 +33,21 @@
         </figure>
     </main>
 
-    <!--Footer Section-->
-    <footer>
-        <ul> <!-- Changed from <u1> to <ul> -->
-            <li><a href="https://webpages.charlotte.edu/cli36/">CLT WEB</a></li>
-            <li><a href="https://kwisssummers.github.io/">GitHub</a></li>
-            <li><a href="https://kwisssummers.github.io/itcs3135/">Course Github.io</a></li>
-            <li><a href="https://www.freecodecamp.org/ChrisLi">FreeCodeCamp Profile</a></li>
-            <li><a href="https://www.codecademy.com/profiles/Cli36">Codecademy Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/chris4li/">LinkedIn Profile</a></li>
-        </ul>
-        <p>Designed by Chris Li Enterprises &copy; 2025</p>
-    </footer>
-</body>
+    <!-- Dynamically load footer -->
+    <div data-include="components/footer.html"></div>
 
+    <!-- Run HTMLInclude to load header/footer dynamically -->
+    <script>
+        HTMLInclude();  // Dynamically load the header and footer content
+    </script>
+
+    <!-- JavaScript to dynamically update validation links -->
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", 
+            "https://validator.w3.org/check?uri=" + location.href);
+
+        document.getElementById("validation_link_css").setAttribute("href", 
+            "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+</body>
 </html>
