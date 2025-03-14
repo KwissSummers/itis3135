@@ -240,3 +240,61 @@ html, body {
         padding: 40px; /* Adjust padding for laptops */
     }
 }
+
+/* =================== TABLE STYLING =================== */
+
+/* General table styling */
+table {
+    width: 100%; /* Ensure table takes full width */
+    border-collapse: collapse; /* Remove space between borders */
+    background-color: #ffffff; /* White background for a clean look */
+    margin: 20px auto; /* Center table */
+    font-size: 1em;
+    border: 1px solid #ccc; /* Light gray border */
+}
+
+/* Table headers */
+th {
+    background-color: #333; /* Dark gray for contrast */
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #999; /* Light gray border */
+}
+
+/* Table data cells */
+td {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    text-align: left;
+}
+
+/* Alternating row colors for readability */
+tbody tr:nth-child(odd) {
+    background-color: #f8f8f8; /* Light gray */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White */
+}
+
+/* Bottom row that spans three columns */
+tfoot tr {
+    font-weight: bold;
+    background-color: #555; /* Medium gray for emphasis */
+    color: white;
+}
+
+/* Responsive table wrapper */
+.table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/* Styling for figure caption */
+figcaption {
+    font-style: italic;
+    font-size: 1em;
+    color: #555; /* Medium gray */
+    margin-top: 10px;
+}
