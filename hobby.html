@@ -355,13 +355,13 @@
   <script>
     // Hide/Show sections
     function showSection(sectionId) {
-      const sections = document.querySelectorAll('main section');
-      sections.forEach((sec) => 
-      {
+    const sections = document.querySelectorAll('main section');
+    sections.forEach((sec) => {
         sec.style.display = 'none';
-      });
-      document.getElementById(sectionId).style.display = 'block';
-    }
+    });
+    document.getElementById(sectionId).style.display = 'block';
+}
+
 
     // Display "what" by default on page load
     window.onload = () => {
