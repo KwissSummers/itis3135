@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/business.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/HTMLInclude.min.js"></script> <!-- Include HTMLInclude.js -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
     <!--Title, name, mascot, course id, page name-->
@@ -13,18 +14,20 @@
 </head>
 
 <body>
+    <!-- Dynamically load header -->
+    <div data-include="components/header.html"></div>
     <header>
         <h1>Chris Li's Cozy Labrador | ITCS3135</h1>
-        <!--Nav Bar-->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="introductions.html">Introductions</a></li>
-                <li><a href="contract.html">Contract</a></li>
-                <li><a href="https://uncc.edu">UNCC Home</a></li>
-            </ul>
-        </nav>
+
+        <!-- Separate Nav for "other" Webpages -->
+    <nav id="other-nav">
+        <ul>
+            <li><a href="stuff/CRAPPY%20webpage-lmao!.html">CRAPPY Webpage</a></li>
+            <li><a href="website_evaluations.html">Website Evaluations</a></li>
+            <li><a href="tables.html">HTML Tables</a></li>
+            <li><a href="hobby.html">Favorite Hobby</a></li>
+        </ul>
+    </nav>
     </header>
 
     <!--Main Content-->
@@ -39,20 +42,21 @@
             our collection has something for everyone.</p>
     </main>
 
-    <!--Footer Section-->
-    <footer>
-        <ul>
-            <li><a href="https://webpages.charlotte.edu/cli36/">CLT WEB</a></li>
-            <li><a href="https://kwisssummers.github.io/">GitHub</a></li>
-            <li><a href="https://kwisssummers.github.io/itcs3135/">Course Github.io</a></li>
-            <li><a href="https://www.freecodecamp.org/ChrisLi">FreeCodeCamp Profile</a></li>
-            <li><a href="https://www.codecademy.com/profiles/Cli36">Codecademy Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/chris4li/">LinkedIn Profile</a></li>
-            <li><a href="https://webpages.charlotte.edu/cli36/itis3135/chrislienterprises.co">Design Firm</a></li>
-        </ul>
-        <p><em>"Serenity in every Stitch"</em></p>
-        <p>Designed by Chris Li Enterprises &copy; 2025</p>
-    </footer>
-</body>
+    <!-- Dynamically load footer -->
+    <div data-include="components/footer.html"></div>
+
+    <!-- Run HTMLInclude to load header/footer dynamically -->
+    <script>
+        HTMLInclude();  // Dynamically load the header and footer content
+    </script>
+
+    <!-- JavaScript to dynamically update validation links -->
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", 
+            "https://validator.w3.org/check?uri=" + location.href);
+
+        document.getElementById("validation_link_css").setAttribute("href", 
+            "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
 
 </html>
